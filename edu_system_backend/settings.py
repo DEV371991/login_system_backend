@@ -87,6 +87,14 @@ TEMPLATES = [
     },
 ]
 
+# Allow requests from React dev server
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",   # React (npm start)
+    "http://127.0.0.1:3000",
+]
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True
+
 WSGI_APPLICATION = 'edu_system_backend.wsgi.application'
 
 
